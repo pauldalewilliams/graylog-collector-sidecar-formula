@@ -9,9 +9,8 @@ Sample Pillar:
 .. code-block:: yaml
 
     graylog-collector-sidecar:
-      agent:
-        enabled: true
-        api: https://graylog.example.com/api/
-        tags:
-          - linux
-          - apache
+      enabled: true
+      api: https://graylog.example.com/api/
+      tags:
+        - linux
+        - apache
