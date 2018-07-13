@@ -12,4 +12,4 @@ Suse:
   service: collector-sidecar.service
 {%- endload %}
 
-{%- set sidecar = salt['grains.filter_by'](base_defaults, merge=salt['pillar.get']('graylog:sidecar')) %}
+{%- set sidecar = salt['grains.filter_by'](base_defaults, merge=salt['pillar.get']('graylog-collector-sidecar')) %}

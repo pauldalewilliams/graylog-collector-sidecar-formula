@@ -1,5 +1,5 @@
 # MANAGED BY SALT - DO NOT EDIT MANUALLY
-{%- from "graylog_collector_sidecar/map.jinja" import sidecar with context -%}
+{%- from "graylog-collector-sidecar/map.jinja" import sidecar with context -%}
 {%- set host = salt['grains.get']('host') %}
 server_url: {{ sidecar.api }}
 update_interval: 10
@@ -27,4 +27,3 @@ backends:
     enabled: true
     binary_path: /usr/bin/filebeat
     configuration_path: /etc/graylog/collector-sidecar/generated/filebeat.yml
-

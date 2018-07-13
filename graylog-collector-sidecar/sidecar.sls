@@ -1,4 +1,4 @@
-{%- from "graylog_collector_sidecar/map.jinja" import sidecar with context %}
+{%- from "graylog-collector-sidecar/map.jinja" import sidecar with context %}
 {%- set noservices = salt['grains.get']('noservices', None) %}
 
 {%- if sidecar.enabled %}
@@ -22,7 +22,7 @@ graylog_collector_sidecar_service_install:
 graylog_collector_sidecar_config:
   file.managed:
   - name: /etc/graylog/collector-sidecar/collector_sidecar.yml
-  - source: salt://graylog_collector_sidecar/files/collector_sidecar.yml
+  - source: salt://graylog-collector-sidecar/files/collector_sidecar.yml
   - template: jinja
   - require:
     - pkg: graylog_collector_sidecar_package

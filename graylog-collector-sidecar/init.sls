@@ -1,6 +1,6 @@
-{%- if pillar.graylog is defined %}
+{%- if pillar.graylog-collector-sidecar is defined %}
 include:
-{%- if pillar.graylog.sidecar is defined %}
-  - graylog_collector_sidecar.sidecar
+{%- if pillar.graylog-collector-sidecar.agent is defined %}
+  - graylog-collector-sidecar.sidecar
 {%- endif %}
 {%- endif %}
