@@ -1,0 +1,1 @@
+# graylog-collector-sidecar-formula
